@@ -11,13 +11,13 @@ numOfTollbooths=8-numOfEtcB;
 numOfLanes=4-numOfEtcL;
 % 收费亭中有无车辆，有待输入
 tolBooths=zeros(1,numOfTollbooths);
-%%输入，不规范
-tolBooths=[1,1,0,1,0,0,1];
+%%输入，bu'gui
+
 % 对于收费亭中车辆的指令，无车或者等待为0，开往x车道为x
 cmd=zeros(1,numOfTollbooths);
 % 车道占用情况，1代表被占用，0代表未被占用
-lanes=zeros(1,numOfLanes);
-lanes=[0,0,0];
+Lanes=zeros(1,numOfLanes);
+
 
 
 
