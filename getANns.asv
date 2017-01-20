@@ -1,5 +1,7 @@
 % 输入各收费亭中的车辆情况，以及车道占用情况，输出给车辆的指令
 % 输出对于车辆的指令，包括：等待，开往x号车道
 % 具体参数说明看主函数
-function getANns()
+function cmd=getANns(tollBooths,lanes)
+    lengthT=length(tollBooths);
+    lengthL=length()
 end
