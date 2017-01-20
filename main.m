@@ -3,6 +3,7 @@
 %         i@finalobject.cn
 %         https://github.com/finalObject
 % @date 2017年1月20日 15:17:00
+clear;clc;
 % 输入已经检查完毕的车辆所在收费亭，车道占用情况（某量车已经出发开往该车道，并没有超过安全距离）
 % 输出对于车辆的指令，包括：等待，开往x号车道
 % etc亭数量，etc车道数量,其他收费亭数量，其他车道数量
@@ -17,16 +18,12 @@ tollBooths=[1,1,0,1,0,0,1];
 cmd=zeros(1,numOfTollbooths);
 % 车道占用情况，1代表被占用，0代表未被占用
 lanes=zeros(1,numOfLanes);
-lanes=[0,0,0];
-
-disp('车辆情况');
+lanes=[1,1,0];
 tollBooths
-disp('车道占用情况')
 lanes
-[cmd,lanes]=getAns(tollBooths,lanes);
-disp('给出指令');
+[cmd,lanes,tollBooths]=getAns(tollBooths,lanes);
 cmd
-disp('更新后的车道占用情况')
+tollBooths
 lanes
 
 

@@ -1,7 +1,7 @@
 % 输入各收费亭中的车辆情况，以及车道占用情况，输出给车辆的指令
 % 输出对于车辆的指令，包括：等待，开往x号车道,以及给出指令后的lanes变化
 % 具体参数说明看主函数
-function [cmd,lanes]=getAns(tollBooths,lanes)
+function [cmd,lanes,tollBooths]=getAns(tollBooths,lanes)
     lengthT=length(tollBooths);
     lengthL=length(lanes);
     cmd=zeros(1,lengthT);
@@ -13,9 +13,11 @@ function [cmd,lanes]=getAns(tollBooths,lanes)
         end
         
         for j=1:lengthL
-            if lanes(i)==0
-                cmd(i)=1;
-                lanes(i)=1;
+            if lanes(j)==0
+                tollBooths(i)=0;
+                cmd(i)=j;
+                lanes(j)=1;
+                break;
             end
         end
     end
